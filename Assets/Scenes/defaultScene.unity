@@ -502,6 +502,12 @@ MonoBehaviour:
   ySpeed: 50
   xRange: 33
   yRange: 20
+  positionPitchFactor: 0.5
+  controlPitchFactor: 30
+  positionYawFactor: 0.1
+  controlYawFactor: 0
+  positionRollFactor: 0
+  controlRollFactor: 30
 --- !u!1 &1044640687 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}

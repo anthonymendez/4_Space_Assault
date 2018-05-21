@@ -11,6 +11,13 @@ public class Player : MonoBehaviour {
     [Tooltip("In meters")][Range(0f,100f)][SerializeField] float xRange = 33f;
     [Tooltip("In meters")] [Range(0f,100f)][SerializeField] float yRange = 20f;
 
+    [SerializeField] float positionPitchFactor = 0.5f;
+    [SerializeField] float controlPitchFactor = 30f;
+    [SerializeField] float positionYawFactor = 0.5f;
+    [SerializeField] float controlRollFactor = 30f;
+
+    private float xThrow, yThrow;
+
     // Use this for initialization
     void Start () {
 		
@@ -24,7 +31,14 @@ public class Player : MonoBehaviour {
     }
 
     private void ProcessRotation() {
-        transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
+        float pitchFromPosition = positionPitchFactor * transform.localPosition.y;
+        float pitchFromControl = yThrow * controlPitchFactor;
+        float pitch = pitchFromPosition + pitchFromControl;
+
+        float yaw = positionYawFactor * transform.localPosition.x + 180;
+
+        float roll = xThrow * controlRollFactor;
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
     private void RespondToFiring() {
@@ -35,12 +49,12 @@ public class Player : MonoBehaviour {
     }
 
     private void ProcessTranslation() {
-        float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
+        xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         float xOffset = xThrow * xSpeed * Time.deltaTime;
         float xRawNewPos = transform.localPosition.x + xOffset;
         float xFixNewPos = Mathf.Clamp(xRawNewPos, -xRange, xRange);
 
-        float yThrow = CrossPlatformInputManager.GetAxis("Vertical");
+        yThrow = CrossPlatformInputManager.GetAxis("Vertical");
         float yOffset = yThrow * ySpeed * Time.deltaTime;
         float yRawNewPos = transform.localPosition.y + yOffset;
         float yFixNewPos = Mathf.Clamp(yRawNewPos, -yRange, yRange);
