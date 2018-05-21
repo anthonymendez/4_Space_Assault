@@ -1,6 +1,8 @@
-# Space Assault
+# Space Assault [Development]
 
 ## Game made from: Complete C# Unity Developer 3D Section 4
+
+## <a href = "https://anthonymendez.itch.io/space-assault">Play on Itch.io Now!</a>
 
 ### Game Objective
 
@@ -10,10 +12,10 @@ The main objective of the game is to get through the level, shooting enemies, av
 
 | Key | Controls|
 |-|--------------|
-|W| ??? |
-|SPACE| ??? |
-|A| ??? |
-|D| ??? |
+|W| Move Up |
+|S| Move Down |
+|A| Move Left |
+|D| Move Right |
 
 ### About this game
 
