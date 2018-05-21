@@ -5,11 +5,11 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 public class Player : MonoBehaviour {
 
-    [Tooltip("In meters per second")] [SerializeField] float xSpeed = 50f;
-    [Tooltip("In meters per second")] [SerializeField] float ySpeed = 50f;
+    [Tooltip("In meters per second")] [SerializeField] float xSpeed = 20f;
+    [Tooltip("In meters per second")] [SerializeField] float ySpeed = 20f;
 
-    [Tooltip("In meters")][Range(0f,100f)][SerializeField] float xRange = 33f;
-    [Tooltip("In meters")] [Range(0f,100f)][SerializeField] float yRange = 20f;
+    [Tooltip("In meters")][SerializeField] float xRange = 12.5f;
+    [Tooltip("In meters")][SerializeField] float yRange = 7.79f;
 
     [SerializeField] float positionPitchFactor = 0.5f;
     [SerializeField] float controlPitchFactor = 30f;
