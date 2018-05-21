@@ -498,8 +498,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5c45318e6c9ee49a77fb7f6142c8c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xSpeed: 25
-  ySpeed: 25
+  xSpeed: 50
+  ySpeed: 50
+  xRange: 33
+  yRange: 20
 --- !u!1 &1044640687 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
