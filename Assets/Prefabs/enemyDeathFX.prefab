@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4615432360925414}
   - component: {fileID: 198250795351186570}
   - component: {fileID: 199236510392633532}
+  - component: {fileID: 114630390379307884}
   - component: {fileID: 82526670287391616}
   m_Layer: 0
-  m_Name: Explosion
+  m_Name: enemyDeathFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,8 +36,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1764678066774174}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -226.87, y: -37.36508, z: -662.6991}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -122,6 +123,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114630390379307884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1764678066774174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ffc919afeb7d6a45a680fa23566164b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToSelfDestruct: 1
 --- !u!198 &198250795351186570
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -182,7 +195,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 702954760
+  randomSeed: 873341254
   InitialModule:
     serializedVersion: 3
     enabled: 1
