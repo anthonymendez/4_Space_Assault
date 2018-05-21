@@ -65,7 +65,8 @@ public class PlayerController : MonoBehaviour {
         transform.localPosition = new Vector3(xFixNewPos, yFixNewPos, transform.localPosition.z);
     }
 
-    private void disableControls() {
+    // Called from CollisionHandler.cs as String
+    private void OnPlayerDeath() { 
         isControlDisabled = true;
     }
 }

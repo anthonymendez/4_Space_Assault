@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour { 
+
+    [Tooltip("In Seconds")][SerializeField] float loadSceneDelay = 1f;
 
     void OnCollisionEnter(Collision other) {
         print("Player hit something");
@@ -13,6 +15,11 @@ public class CollisionHandler : MonoBehaviour {
     }
 
     private void StartDeathSequence() {
-        gameObject.SendMessage("disableControls");
+        gameObject.SendMessage("OnPlayerDeath");
+        Invoke("ReloadScene", loadSceneDelay);
+    }
+
+    private void ReloadScene() { // Reference as String
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
