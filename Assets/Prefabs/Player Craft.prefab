@@ -55,9 +55,10 @@ GameObject:
   - component: {fileID: 4809629028923030}
   - component: {fileID: 33862837186844780}
   - component: {fileID: 23527325379276160}
-  - component: {fileID: 114756487229304356}
   - component: {fileID: 54660452441818428}
   - component: {fileID: 65615104441408926}
+  - component: {fileID: 114756487229304356}
+  - component: {fileID: 114163366930424366}
   m_Layer: 0
   m_Name: Player Craft
   m_TagString: Untagged
@@ -285,7 +286,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -296,11 +297,22 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1405952246635316}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 19.749998, y: 6.5250063, z: 19.749998}
   m_Center: {x: 0.0000009536743, y: 1.287508, z: -3.125001}
+--- !u!114 &114163366930424366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1405952246635316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df5505854003ddf4ea223cfc478cd9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114756487229304356
 MonoBehaviour:
   m_ObjectHideFlags: 1

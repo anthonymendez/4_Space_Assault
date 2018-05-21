@@ -3,39 +3,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
-public class Player : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
 
+    [Header("Player Speed")]
     [Tooltip("In meters per second")] [SerializeField] float xSpeed = 20f;
     [Tooltip("In meters per second")] [SerializeField] float ySpeed = 20f;
 
-    [Tooltip("In meters")][SerializeField] float xRange = 12.5f;
-    [Tooltip("In meters")][SerializeField] float yRange = 7.79f;
+    [Header("Movement Constraints")]
+    [Tooltip("In meters")][SerializeField] float xRange = 11.03f;
+    [Tooltip("In meters")][SerializeField] float yRange = 7f;
 
+    [Header("Screen-Position Properties")]
     [SerializeField] float positionPitchFactor = 0.5f;
+    [SerializeField] float positionYawFactor = 4.5f;
+
+    [Header("Control Properties")]
     [SerializeField] float controlPitchFactor = 30f;
-    [SerializeField] float positionYawFactor = 0.5f;
     [SerializeField] float controlRollFactor = 30f;
 
     private float xThrow, yThrow;
+    private bool isControlDisabled = false;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-
-    void OnCollisionEnter(Collision other) {
-        print("Player hit something");
-    }
-
-    void OnTriggerEnter(Collider other) {
-        print("Player hit trigger");
-    }
-	
 	// Update is called once per frame
 	void Update () {
-        ProcessTranslation();
-        ProcessRotation();
-        RespondToFiring();
+        if (!isControlDisabled) {
+            ProcessTranslation();
+            ProcessRotation();
+            RespondToFiring();
+        }
     }
 
     private void ProcessRotation() {
@@ -68,5 +63,9 @@ public class Player : MonoBehaviour {
         float yFixNewPos = Mathf.Clamp(yRawNewPos, -yRange, yRange);
 
         transform.localPosition = new Vector3(xFixNewPos, yFixNewPos, transform.localPosition.z);
+    }
+
+    private void disableControls() {
+        isControlDisabled = true;
     }
 }
