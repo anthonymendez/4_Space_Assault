@@ -592,7 +592,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: f40628ceb4ad8a64e8e3a9bd4c605213, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -717,6 +717,14 @@ Prefab:
     - target: {fileID: 100000, guid: 1e189038777ce4944bcbaf12bc1400df, type: 3}
       propertyPath: m_Name
       value: spaceCraft2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e189038777ce4944bcbaf12bc1400df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e189038777ce4944bcbaf12bc1400df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e189038777ce4944bcbaf12bc1400df, type: 3}
@@ -1788,6 +1796,18 @@ Prefab:
       propertyPath: m_Name
       value: spaceCraft2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e189038777ce4944bcbaf12bc1400df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e189038777ce4944bcbaf12bc1400df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e189038777ce4944bcbaf12bc1400df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e189038777ce4944bcbaf12bc1400df, type: 3}
   m_IsPrefabParent: 0
@@ -2035,6 +2055,14 @@ Prefab:
     - target: {fileID: 100000, guid: 1e189038777ce4944bcbaf12bc1400df, type: 3}
       propertyPath: m_Name
       value: spaceCraft2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e189038777ce4944bcbaf12bc1400df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e189038777ce4944bcbaf12bc1400df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e189038777ce4944bcbaf12bc1400df, type: 3}
@@ -3493,7 +3521,8 @@ PlayableDirector:
   - key: {fileID: 114684687026628368, guid: 1a561d7982477f04a9f228b5f6d4041c, type: 2}
     value: {fileID: 2043933847}
   m_ExposedReferences:
-    m_References: []
+    m_References:
+    - 3f11de0aad7de2f499da109c4ec26ee7: {fileID: 416255099}
 --- !u!95 &1733826521
 Animator:
   serializedVersion: 3
