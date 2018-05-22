@@ -25,11 +25,16 @@ public class Enemy : MonoBehaviour {
     }
 
     void OnParticleCollision(GameObject other) {
-        scoreBoard.ScorePerHit(scorePerHit);
-        hitsToDeath--;
+        ProcessHit();
         if (hitsToDeath <= 0) {
             KillEnemy();
         }
+    }
+
+    private void ProcessHit() {
+        scoreBoard.ScorePerHit(scorePerHit);
+        // todo add FX stuff
+        hitsToDeath--;
     }
 
     private void KillEnemy() {
