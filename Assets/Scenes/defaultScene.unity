@@ -881,6 +881,11 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 53b5a58c8d96cb94da5af05718e7807e, type: 3}
   m_PrefabInternal: {fileID: 509372240}
+--- !u!1 &521452248 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1797443431152848, guid: c0c6c8e60f1461e44aaed676b722ba6c,
+    type: 2}
+  m_PrefabInternal: {fileID: 629858066}
 --- !u!1 &536393415 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 8eb269471cba1e749bc881662a786514, type: 3}
@@ -1086,6 +1091,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 2043933852}
     m_Modifications:
+    - target: {fileID: 114756487229304356, guid: c0c6c8e60f1461e44aaed676b722ba6c,
+        type: 2}
+      propertyPath: guns.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4809629028923030, guid: c0c6c8e60f1461e44aaed676b722ba6c, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -1118,6 +1128,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114756487229304356, guid: c0c6c8e60f1461e44aaed676b722ba6c,
+        type: 2}
+      propertyPath: guns
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114756487229304356, guid: c0c6c8e60f1461e44aaed676b722ba6c,
+        type: 2}
+      propertyPath: guns.Array.data[0]
+      value: 
+      objectReference: {fileID: 747172010}
+    - target: {fileID: 114756487229304356, guid: c0c6c8e60f1461e44aaed676b722ba6c,
+        type: 2}
+      propertyPath: guns.Array.data[1]
+      value: 
+      objectReference: {fileID: 1672526933}
+    - target: {fileID: 114756487229304356, guid: c0c6c8e60f1461e44aaed676b722ba6c,
+        type: 2}
+      propertyPath: guns.Array.data[2]
+      value: 
+      objectReference: {fileID: 662508126}
+    - target: {fileID: 114756487229304356, guid: c0c6c8e60f1461e44aaed676b722ba6c,
+        type: 2}
+      propertyPath: guns.Array.data[3]
+      value: 
+      objectReference: {fileID: 521452248}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0c6c8e60f1461e44aaed676b722ba6c, type: 2}
   m_IsPrefabParent: 0
@@ -1187,6 +1222,11 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 47301a8c3f34bdc458c3efe0c7bfc851, type: 3}
   m_PrefabInternal: {fileID: 631855801}
+--- !u!1 &662508126 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1706300832877172, guid: c0c6c8e60f1461e44aaed676b722ba6c,
+    type: 2}
+  m_PrefabInternal: {fileID: 629858066}
 --- !u!1 &673101670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,6 +1416,11 @@ MonoBehaviour:
   parent: {fileID: 1270097468}
   deathFX: {fileID: 1764678066774174, guid: 8b8e405106d262d4086b994493878810, type: 2}
   scorePerHit: 20
+--- !u!1 &747172010 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1141118485446006, guid: c0c6c8e60f1461e44aaed676b722ba6c,
+    type: 2}
+  m_PrefabInternal: {fileID: 629858066}
 --- !u!1 &802092489 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 53b5a58c8d96cb94da5af05718e7807e, type: 3}
@@ -3270,6 +3315,11 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: b6c02cbf5bb4231418039d0e0c27ee9b, type: 3}
+--- !u!1 &1672526933 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1577080792105160, guid: c0c6c8e60f1461e44aaed676b722ba6c,
+    type: 2}
+  m_PrefabInternal: {fileID: 629858066}
 --- !u!1001 &1722077216
 Prefab:
   m_ObjectHideFlags: 0

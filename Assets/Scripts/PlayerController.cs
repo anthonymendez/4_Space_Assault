@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
     [Header("Player Speed")]
     [Tooltip("In meters per second")] [SerializeField] float xSpeed = 20f;
     [Tooltip("In meters per second")] [SerializeField] float ySpeed = 20f;
+    [SerializeField] GameObject[] guns;
 
     [Header("Movement Constraints")]
     [Tooltip("In meters")][SerializeField] float xRange = 11.03f;
@@ -29,7 +30,7 @@ public class PlayerController : MonoBehaviour {
         if (!isControlDisabled) {
             ProcessTranslation();
             ProcessRotation();
-            RespondToFiring();
+            ProcessFiring();
         }
     }
 
@@ -44,11 +45,28 @@ public class PlayerController : MonoBehaviour {
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
-    private void RespondToFiring() {
+    private void ProcessFiring() {
         bool fire1Down = CrossPlatformInputManager.GetButton("Fire1");
         bool fire2Down = CrossPlatformInputManager.GetButton("Fire2");
         bool fire3Down = CrossPlatformInputManager.GetButton("Fire3");
 
+        if (fire1Down) {
+            ActiveGuns();
+        } else {
+            DeactivateGuns();
+        }
+    }
+
+    private void DeactivateGuns() {
+        foreach (GameObject gObject in guns) {
+            gObject.SetActive(false);
+        }
+    }
+
+    private void ActiveGuns() {
+        foreach (GameObject gObject in guns) {
+            gObject.SetActive(true);
+        }
     }
 
     private void ProcessTranslation() {
