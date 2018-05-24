@@ -1,4 +1,4 @@
-# Space Assault [Development]
+# Space Assault
 
 ## Game made from: Complete C# Unity Developer 3D Section 4
 
@@ -16,6 +16,8 @@ The main objective of the game is to get through the level, shooting enemies, av
 |S| Move Down |
 |A| Move Left |
 |D| Move Right |
+| Left Ctrl | Shoot |
+| Left Mouse Button | Shoot |
 
 ### About this game
 
