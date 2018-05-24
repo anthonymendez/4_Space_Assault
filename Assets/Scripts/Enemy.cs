@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,13 +11,20 @@ public class Enemy : MonoBehaviour {
     [SerializeField] int scorePerHit = 12;
     [SerializeField] int hitsToDeath = 10;
 
+    [SerializeField] GameObject prefabToTakeOver;
+
     ScoreBoard scoreBoard;
 
     private MeshCollider meshCollider;
 
     void Start() {
+        ReplaceWithNewPrefab();
         AddNonTriggerMeshCollider();
         scoreBoard = FindObjectOfType<ScoreBoard>();
+    }
+
+    private void ReplaceWithNewPrefab() {
+        
     }
 
     private void AddNonTriggerMeshCollider() {
@@ -40,6 +48,7 @@ public class Enemy : MonoBehaviour {
     private void KillEnemy() {
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
         fx.transform.parent = parent;
-        Destroy(gameObject);
+        if(gameObject != null)
+            Destroy(gameObject);
     }
 }

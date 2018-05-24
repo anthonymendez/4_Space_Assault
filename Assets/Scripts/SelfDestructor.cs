@@ -12,6 +12,7 @@ public class SelfDestructor : MonoBehaviour {
 	}
 
     private void SelfDestruct() {
-        Destroy(gameObject, timeToSelfDestruct);
+        if(gameObject != null)
+            Destroy(gameObject, timeToSelfDestruct);
     }
 }
